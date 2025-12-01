@@ -134,22 +134,28 @@ h1 {
 .tiktok-overlay {
     position: fixed;
     top: 0; left: 0;
-    width: 100%; height: 100%;
+    width: 100%;
+    height: 100%;
     background: rgba(0,0,0,0.85);
     color: white;
-    padding: 20px;
+    padding: env(safe-area-inset-top, 20px) 20px env(safe-area-inset-bottom, 20px);
     z-index: 1000;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+    overflow-y: auto;
 }
 .tiktok-overlay .overlay-content {
     background: rgba(255,255,255,0.1);
     padding: 25px;
     border-radius: 12px;
-    max-width: 85%;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
 }
 .tiktok-overlay button {
     background: #748ffc;
@@ -160,7 +166,9 @@ h1 {
     cursor: pointer;
     margin-top: 15px;
     font-size: 16px;
-    transition: .2s;
+    transition: all .2s;
+    width: 100%;
+    max-width: 250px;
 }
 .tiktok-overlay button:hover {
     background: #5a6ffc;
@@ -229,4 +237,5 @@ h1 {
     .container {
         padding: 10px;  /* Сжимаем padding контейнера для места */
     }
+
 }
