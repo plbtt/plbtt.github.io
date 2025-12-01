@@ -11,9 +11,17 @@ function openTG() {
                 <div class="overlay-content">
                     <p>Чтобы открыть канал Telegram:</p>
                     <ol style="text-align: left; padding-left: 18px; margin: 10px 0;">
-                        <li>Нажмите ⋮ (три точки) в правом верхнем углу.</li>
+                        <li>
+                            Нажмите 
+                            <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle;">
+                                <circle cx="5" cy="12" r="3"></circle>
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <circle cx="19" cy="12" r="3"></circle>
+                            </svg>
+                            (три точки) в правом верхнем углу.
+                        </li>
                         <li>Выберите "Открыть в браузере".</li>
-                        <li>После этого снова нажмите на кнопку ниже.</li>
+                        <li>После этого снова нажмите на кнопку.</li>
                     </ol>
                     <button onclick="this.closest('.tiktok-overlay').remove();">Понятно</button>
                 </div>
