@@ -3,7 +3,6 @@ function openTG() {
     const isTikTokBrowser = /ttwebview|aweme|musical_ly/i.test(ua);
 
     if (isTikTokBrowser) {
-        // проверяем, нет ли уже оверлея
         if (!document.querySelector('.tiktok-overlay')) {
             const overlay = document.createElement('div');
             overlay.className = 'tiktok-overlay';
@@ -13,15 +12,16 @@ function openTG() {
                     <ol style="text-align: left; padding-left: 18px; margin: 10px 0;">
                         <li>
                             Нажмите 
-                            <svg width="20" height="20" viewBox="0 0 24 24" style="vertical-align: middle;">
-                                <circle cx="5" cy="12" r="3"></circle>
-                                <circle cx="12" cy="12" r="3"></circle>
-                                <circle cx="19" cy="12" r="3"></circle>
+                            <svg width="22" height="22" viewBox="0 0 24 24" 
+                                 style="vertical-align: middle; margin-left: 4px;">
+                                <circle cx="4" cy="12" r="3.4" fill="#fff"></circle>
+                                <circle cx="12" cy="12" r="3.4" fill="#fff"></circle>
+                                <circle cx="20" cy="12" r="3.4" fill="#fff"></circle>
                             </svg>
                             (три точки) в правом верхнем углу.
                         </li>
                         <li>Выберите "Открыть в браузере".</li>
-                        <li>После этого снова нажмите на кнопку.</li>
+                        <li>После этого снова нажмите на кнопку ниже.</li>
                     </ol>
                     <button onclick="this.closest('.tiktok-overlay').remove();">Понятно</button>
                 </div>
@@ -31,7 +31,6 @@ function openTG() {
         return;
     }
 
-    // обычный браузер — редирект на Telegram
     window.location.href = "https://t.me/+_PzFoPA1DmM1NjIy";
 }
 
